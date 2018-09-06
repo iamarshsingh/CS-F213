@@ -1,0 +1,40 @@
+class SimpleCalc{
+    
+    public float calculate(int firstOperand, int secondOperand, char operator){
+        float ans=0.0f;
+        if(operator=='+'){
+            ans = (float)(firstOperand + secondOperand);
+        }
+        else if(operator=='-'){
+            ans = (float)(firstOperand - secondOperand);
+        }
+        else if(operator=='*'){
+            ans = (float)(firstOperand * secondOperand);
+        }
+        else if(operator=='/' && secondOperand!=0){
+            ans = ((float)firstOperand / (float)secondOperand);
+        }
+        else{
+            return firstOperand;
+        }
+        return ans;
+    }
+    
+    public void typeCast​(float value, char type){
+        if(type=='b'){
+            byte ans = (byte)value;
+            System.out.printf("Byte: "+ans);
+        }
+        else if(type=='c'){
+            char ans = (char)value;
+            System.out.printf("Char: "+ans);
+        }
+        else if(type=='i'){
+            int ans = (int)value;
+            System.out.printf("Int: "+ans);
+        }
+        else{
+            System.out.printf("Invalid type");
+        }
+    }
+}
